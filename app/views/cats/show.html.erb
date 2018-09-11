@@ -1,0 +1,33 @@
+<table>
+    <thead>
+        <tr>
+            <th colspan="2"> Meet <%= @cat.name %>!  </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Age</td>
+            <td> <%= @cat.age %></td>
+        </tr>
+        
+        <tr>
+            <td>Sex</td>
+            <td> <%= @cat.sex %></td>
+        </tr>
+        
+        <tr>
+            <td>Color</td>
+            <td> <%= @cat.color %></td>
+        </tr>
+        
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2"> <%= @cat.description %> </td>
+        </tr>
+    </tfoot>
+</table>
+<br>
+<form action="<%=edit_cat_url(@cat)%>">
+  <input type="submit" value="Edit This Kitty">
+</form>
