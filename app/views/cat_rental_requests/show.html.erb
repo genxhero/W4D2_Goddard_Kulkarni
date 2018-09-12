@@ -1,0 +1,28 @@
+<table>
+    <thead>
+        <tr>
+            <th colspan="2"> Request for <%= Cat.find_by(id: @cat_rental_request.cat_id).name %>  </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Start Date</td>
+            <td> <%= @cat_rental_request.start_date %></td>
+        </tr>
+        
+        <tr>
+            <td>End Date</td>
+            <td> <%= @cat_rental_request.end_date %></td>
+        </tr>
+        
+        <tr>
+            <td>Status</td>
+            <td> <%= @cat_rental_request.status %></td>
+        </tr>
+        
+    </tbody>
+</table>
+<br>
+<form action="<%=cat_url(Cat.find_by(id: @cat_rental_request.cat_id))%>">
+  <input type="submit" value="See This Kitty">
+</form>
